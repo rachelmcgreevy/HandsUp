@@ -1,0 +1,41 @@
+﻿<Window x:Class="KinectImageViewer.FullscreenPics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fullscreen" Height="673.256" Width="1020.93" WindowState="Maximized" WindowStyle="None"
+        Loaded="OnLoad">
+    <Grid Background="Black" Margin="0,0,0,0">
+        <Image x:Name="FullscreenImageBox" HorizontalAlignment="Center" Height="auto" VerticalAlignment="Center" Width="auto" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="" MouseEnter="exit_MouseEnter" MouseLeave="exit_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="80" Height="80" Click="Exit" Focusable="False">
+            <Button.Background>
+                <ImageBrush ImageSource="appbar_close.png"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush Stretch="Uniform" ImageSource="appbar_close.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Content="" MouseEnter="nextBtn_MouseEnter" MouseLeave="nextBtn_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="300,0,0,10" Width="50" Height="50" Click="nextBtn_Click" Focusable="False">
+            <Button.Background>
+                <ImageBrush ImageSource="br_next_yellow.png"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush Stretch="Uniform" ImageSource="br_next_yellow.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Content="" MouseEnter="previousBtn_MouseEnter" MouseLeave="previousBtn_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Width="50" Height="50" Click="previousBtn_Click" Focusable="False" Margin="-200,0,0,-40">
+            <Button.Background>
+                <ImageBrush ImageSource="br_next_yellow.png"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush Stretch="Uniform" ImageSource="br_next_yellow.png"/>
+            </Button.OpacityMask>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

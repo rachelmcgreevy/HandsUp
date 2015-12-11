@@ -1,0 +1,144 @@
+﻿<Window x:Class="KinectImageViewer.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Help" Height="556.8" Width="759.955" Background="#FFA0CAD8" WindowStartupLocation="CenterScreen">
+	<Window.Resources>
+		<Storyboard x:Key="Storyboard1">
+			<DoubleAnimationUsingPath Duration="0:0:2" Source="X" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+				<DoubleAnimationUsingPath.PathGeometry>
+					<PathGeometry Figures="M3.0000031,2.3 L88.599997,2.3"/>
+				</DoubleAnimationUsingPath.PathGeometry>
+			</DoubleAnimationUsingPath>
+			<DoubleAnimationUsingPath Duration="0:0:2" Source="Y" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rectangle">
+				<DoubleAnimationUsingPath.PathGeometry>
+					<PathGeometry Figures="M3.0000031,2.3 L88.599997,2.3"/>
+				</DoubleAnimationUsingPath.PathGeometry>
+			</DoubleAnimationUsingPath>
+		</Storyboard>
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+		</EventTrigger>
+	</Window.Triggers>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+    	<Rectangle HorizontalAlignment="Left" Height="208" Margin="10,58,0,0" VerticalAlignment="Top" Width="256">
+    		<Rectangle.Fill>
+    			<ImageBrush Stretch="Uniform" ImageSource="moveRight.png"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Rectangle HorizontalAlignment="Left" Height="208" Margin="286.4,58,-254.8,0" VerticalAlignment="Top" Width="262">
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="fullScreenHandsUp.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Rectangle HorizontalAlignment="Left" Height="208" Margin="542.8,58,-494.8,0" VerticalAlignment="Top" Width="245.6">
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="moveLeft.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<TextBlock HorizontalAlignment="Left" Height="31.8" Margin="29.4,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontWeight="Bold" FontFamily="Convection" FontSize="21.333" TextAlignment="Center"><Run Language="en-gb" Text="Navigate Left"/></TextBlock>
+    	<TextBlock HorizontalAlignment="Left" Height="63" Margin="308.6,10,-217.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.4" FontWeight="Bold" FontFamily="Convection" FontSize="21.333" TextAlignment="Center"><Run Language="en-gb" Text="Toggle "/><Run Language="en-gb" Text="Fullscreen on/off"/></TextBlock>
+    	<TextBlock HorizontalAlignment="Left" Height="31.8" Margin="577.4,10,-467.8,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontWeight="Bold" FontFamily="Convection" FontSize="21.333" TextAlignment="Center"><Run Language="en-gb" Text="Navigate Right"/></TextBlock>
+    	<Rectangle HorizontalAlignment="Left" Height="80" Margin="115,335.2,0,-143.2" VerticalAlignment="Top" Width="108">
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="playHelpButton.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="32" Margin="49.4,359.2,0,-119.2" VerticalAlignment="Top" Width="60.6" RenderTransformOrigin="0.5,0.5">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="whole_hand.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<TextBlock HorizontalAlignment="Left" Height="32.8" Margin="106.4,283.8,-386.6,-44.6" TextWrapping="Wrap" VerticalAlignment="Top" Width="573.8" FontWeight="Bold" FontFamily="Convection" FontSize="21.333"><Run Language="en-gb" Text="Hold right hand over a button for 2 seconds to press it"/></TextBlock>
+    	<Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="80" Margin="495.2,339.2,-309.6,-147.2" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.5,0.5">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="playHelpButton.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Path Data="M455.6,377 L495.8,375.4" HorizontalAlignment="Left" Height="1.6" Margin="455.6,375.4,-202.2,-105" Stretch="Fill" VerticalAlignment="Top" Width="40.2">
+    		<Path.Fill>
+    			<ImageBrush ImageSource="whole_hand.png" Stretch="Uniform"/>
+    		</Path.Fill>
+    	</Path>
+    	<Path Data="M82.2,377 L167.8,377" HorizontalAlignment="Left" Height="0" Margin="82.2,377,0,-105" Stretch="Fill" VerticalAlignment="Top" Width="85.6">
+    		<Path.Fill>
+    			<ImageBrush ImageSource="whole_hand.png" Stretch="Uniform"/>
+    		</Path.Fill>
+    	</Path>
+    	<Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="80.8" Margin="460.6,335.2,-286.2,-144" VerticalAlignment="Top" Width="119.2" RenderTransformOrigin="0.5,0.5">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="loadingIcon.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    	<Path x:Name="path" Data="M1.2207031E-05,39.199988 L90.400012,-1.2207031E-05" HorizontalAlignment="Left" Height="39.2" Margin="328.6,351.2,-125.4,-118.4" VerticalAlignment="Top" Width="90.4" RenderTransformOrigin="0.5,0.5" Fill="Black" Stroke="Black" OpacityMask="Black">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="22.787"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+    	<Path x:Name="path1" Data="M21.600006,16.799994 L6.1035157E-06,-6.1035157E-06" HorizontalAlignment="Left" Height="16.8" Margin="399,353,-127,-97.8" VerticalAlignment="Top" Width="21.6" Fill="Black" Stroke="Black" OpacityMask="Black" RenderTransformOrigin="0.5,0.5">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+    	<Path x:Name="path1_Copy" Data="M21.600006,16.799994 L6.1035157E-06,-6.1035157E-06" HorizontalAlignment="Left" Height="16.8" Margin="402.2,374,-130.2,-118.8" VerticalAlignment="Top" Width="21.6" Fill="Black" Stroke="Black" OpacityMask="Black" RenderTransformOrigin="0.5,0.5">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="88.762"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+    	<TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="36" Margin="308.6,404.4,-134.2,-168.4" TextWrapping="Wrap" VerticalAlignment="Top" Width="119.2" FontFamily="Convection" FontWeight="Bold"><Run Language="en-gb" Text="Processing request"/></TextBlock>
+    	<Path Data="M82.2,377 L167.8,377" HorizontalAlignment="Left" Height="1" Margin="82.2,377,0,0" Stretch="Fill" VerticalAlignment="Top" Width="86.6"/>
+        <Button x:Name="closeBtn" Content=""  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" HorizontalAlignment="Left" Height="57.8" Margin="279.4,456,0,0" VerticalAlignment="Top" Width="182.4" FontWeight="Bold" Click="Button_Click" Focusable="False">
+    		<Button.OpacityMask>
+    			<ImageBrush ImageSource="appbar_close_black.png" Stretch="Uniform"/>
+    		</Button.OpacityMask>
+    		<Button.Background>
+    			<ImageBrush Stretch="Uniform" ImageSource="appbar_close_black.png"/>
+    		</Button.Background>
+    	</Button>
+    	<Rectangle HorizontalAlignment="Left" Height="158.4" Margin="608.2,377,-13.4,-6.6" VerticalAlignment="Top" Width="158.755">
+    		<Rectangle.Fill>
+    			<ImageBrush ImageSource="logoHandsUp.png" Stretch="Uniform"/>
+    		</Rectangle.Fill>
+    	</Rectangle>
+    </Grid>
+</Window>
